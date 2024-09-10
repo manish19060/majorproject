@@ -1,5 +1,6 @@
 //for env
 if(process.env.NODE_ENV !="production"){
+   // console.log(process.env.NODE_ENV);
     require("dotenv").config();
 
 }
@@ -8,10 +9,10 @@ if(process.env.NODE_ENV !="production"){
 const express = require("express");
 const app = express();
 
-//for review.js model
-const Review=require("./models/review.js");
-//for listing.js model
-const listing = require("./models/listing.js");
+// //for review.js model
+// const Review=require("./models/review.js");
+// //for listing.js model
+// const listing = require("./models/listing.js");
 
 // for listing router
 const listingsRouter=require("./routes/listings.js");
@@ -28,13 +29,13 @@ const LocalStrategy=require("passport-local");
 // require user model
 const User=require("./models/user.js");
 
-// joi schema
-const { listingSchema,reviewSchema }=require("./schema.js");
+// // joi schema
+// const { listingSchema,reviewSchema }=require("./schema.js");
 
-// for joi
-const Joi = require('joi');
-// for error handling
-const wrapAsync = require("./utils/wrapAsync.js");
+// // for joi
+// const Joi = require('joi');
+// // for error handling
+// const wrapAsync = require("./utils/wrapAsync.js");
 
 //express Error
 const ExpressError = require("./utils/ExpressError.js");
@@ -49,7 +50,7 @@ const MongoStore = require('connect-mongo');
 const flash=require("connect-flash");
 
 const ejsMate = require("ejs-mate");
-const methodOverride = require("method-override");
+const methodOverride = require("method-override"); 
 const path = require("path");
 const mongoose = require("mongoose");
 

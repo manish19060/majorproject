@@ -94,11 +94,12 @@
                                             <p class="card-text">
                                                 <%= review.comment%>
                                             </p>
-
+                                            <%if(currUser && currUser._id.equals(review.author._id)){%>
                                             <form method="POST"
                                                 action="/listings/<%=listing1._id%>/reviews/<%=review._id%>?_method=DELETE">
                                                 <button class="btn btn-dark">delete</button>
                                             </form>
+                                            <% } %>
                                             <!-- <a href="#" class="card-link">Card link</a>
                       <a href="#" class="card-link">Another link</a> -->
                                         </div>
